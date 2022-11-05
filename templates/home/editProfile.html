@@ -1,0 +1,59 @@
+{% extends 'home/baseProduct.html' %}
+
+{% block productcss %}
+<link rel="stylesheet" href="/static/css/editProduct.css">
+<link rel="stylesheet" href="/static/css/editProfile.css">
+{% endblock productcss %}
+
+{% block productContainer %}
+<div class="productAddContainer">
+    <form action="/mydashboard/editprofile" class="productAddForm" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="name">
+            <div class="fname productAdd">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" value="{{ request.user.first_name }}" required>
+                <span id="fnameError" class="errorText"></span>
+            </div>
+            <div class="lname productAdd">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" value="{{ request.user.last_name }}" required>
+                <span id="lnameError" class="errorText"></span>
+            </div>
+        </div>
+        <div class="email productAdd">
+            <label for="email">Email Id</label>
+            <input type="email" id="email" name="email" value="{{ request.user.email }}" required>
+            <span id="emailError" class="errorText"></span>
+        </div>
+        <div class="name">
+            <div class="profileImage productAdd fname">
+                <label for="profileImage">Profile Image</label>
+                <label for="profileImage" class="chooseFile" id="profileImageButton">
+                    <i class="fas fa-cloud-upload-alt fa-5x"></i>
+                    <span id="profileImageName" class="uploadText">Choose File</span>
+                </label>
+                <input type="file" accept="image/*" id="profileImage" name="profileImage" required>
+            </div>
+            <div class="bannerImage productAdd">
+                <label for="bannerImage">Banner Image</label>
+                <label for="bannerImage" class="chooseFile" id="bannerImageButton">
+                    <i class="fas fa-cloud-upload-alt fa-5x"></i>
+                    <span id="bannerImageName" class="uploadText">Choose File</span>
+                </label>
+                <input type="file" accept="image/*" id="bannerImage" name="bannerImage" required>
+            </div>
+        </div>
+        <div class="updateDate">
+            <span>Last updated at: {{ request.user.profile.last_update_date }}</span>
+        </div>
+        <div class="productAddButtons">
+            <input id="productSave" type="submit" class="button" value="Save">
+        </div>
+    </form>
+</div>
+{% endblock productContainer %}
+
+{% block productscript %}
+<script src="/static/js/editProfile.js"></script>
+{% endblock productscript %}

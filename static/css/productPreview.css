@@ -1,0 +1,406 @@
+/* Video preview container section */
+#previewContainer{
+    display: flex;
+    margin: 5rem 4rem 0;
+}
+
+#videoPreview iframe{
+    width: 65.5vw;
+    height: 70vh;
+    border-radius: 10px;
+    box-shadow: 0px 0px 16px #aaaaaa;
+}
+
+#videoDownload{
+    width: 100%;
+}
+
+#videoDownload h1{
+    letter-spacing: 0;
+    font-family: var(--font_Montserrat);
+    font-size: 2.6rem;
+    line-height: 2.8rem;
+    color: #303030;
+    font-weight: 800;
+}
+
+.downloadContainer{
+    padding-left: 10rem;
+    padding-top: 1.2rem;
+}
+
+.downloadText{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 3rem 0;
+    color: #6b6b6b;
+}
+
+.liDownload{
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 2rem;
+    padding-bottom: 1.4rem;
+}
+
+.liDownload:not(:last-of-type):before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: .1rem;
+    left: .35rem;
+    top: calc((1em - 0.8rem)/2);
+    background-color: var(--button_color);
+}
+
+.liDownload::after{
+    content: "";
+    top: calc((1em - 0.8rem)/2);
+    left: 0;
+    position: absolute;
+    display: inline-block;
+    box-sizing: border-box;
+    width: .8rem;
+    height: .8rem;
+    border: 1px solid var(--button_color);
+    border-radius: 50%;
+    background-color: #fff;
+    flex-shrink: 0;
+}
+
+.liDownload h2{
+    font-family: var(--font_Montserrat);
+    margin-top: 0;
+    letter-spacing: 0;
+    line-height: 1.2rem;
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.liDownload span{
+    line-height: 1.6rem;
+    font-size: 1.3rem;
+    margin: .6rem;
+    color: #303030;
+    word-break: break-word;
+    display: block;
+}
+
+#youtubeButtonM{
+    display: none;
+}
+
+#facebookButtonM{
+    display: none;
+}
+
+#downloadButtons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#downloadButtons .completeDownload{
+    text-align: center;
+    width: 86%;
+    padding: 1rem 2rem 1rem;
+    font-family: var(--font_Montserrat);
+    font-size: 1.4rem;
+    font-weight: 700;
+    white-space: nowrap;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--buttonHover_transition);
+    background-color: var(--button_color);
+    color: #fff;
+    line-height: 1.6rem;
+    margin-bottom: .8rem;
+}
+
+#downloadButtons .completeDownload:hover{
+    background-color: var(--buttonHover_color);
+}
+
+#downloadButtons .productDownload{
+    text-align: center;
+    width: 86%;
+    padding: 1rem 2rem 1rem;
+    font-family: var(--font_Montserrat);
+    font-size: 1.4rem;
+    font-weight: 700;
+    white-space: nowrap;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--buttonHover_transition);
+    background-color: var(--button_color);
+    color: #fff;
+    line-height: 1.6rem;
+    margin-bottom: .8rem;
+    display: none;
+}
+
+#downloadButtons .productDownload:hover{
+    background-color: var(--buttonHover_color);
+}
+
+#downloadButtons .previewDownload{
+    text-align: center;
+    width: 86%;
+    padding: 1rem 2rem 1rem;
+    font-family: var(--font_Montserrat);
+    font-size: 1.4rem;
+    font-weight: 700;
+    white-space: nowrap;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    line-height: 1.6rem;
+    transition: var(--buttonHover_transition);
+    background-color: transparent;
+    color: currentColor;
+    box-shadow: inset 0 0 0 1px currentColor;
+}
+
+#downloadButtons .previewDownload:hover{
+    opacity: 0.6;
+}
+
+/* video description CSS */
+.videoDesc{
+    text-align: justify;
+    width: 65.5vw;
+    margin-top: 5rem;
+}
+
+#videoDescMobile{
+    display: none;
+}
+
+/*Category product CSS */
+.prevNxt{
+    display: none;
+}
+
+#categoryProducts{
+    margin-top: 5rem;
+    padding-bottom: 4rem;
+    background-color: var(--background_2);
+}
+
+#categoryProducts::before{
+    content: '';
+    background-color: var(--background_2);
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -2;
+}
+
+#categoryProducts header{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 4rem 7rem 2rem;
+}
+
+#categoryProducts header h1{
+    font-family: var(--font_Montserrat);
+}
+
+#categoryProducts header a{
+    color: var(--linkMark_color);
+    cursor: pointer;
+}
+
+#categoryProducts header span{
+    font-family: var(--font_Montserrat);
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: .075em;
+    text-transform: uppercase;
+}
+
+#categoryProducts header svg{
+    width: 3rem;
+    height: .8rem;
+    margin-left: .6rem;
+    fill: currentColor;
+}
+/* over-right base css cards hover effect */
+.cards:hover{
+    box-shadow: 0 5px 25px #02fff0c4;
+}
+
+/* Responsive CSS */
+/* Tablet CSS */
+@media screen and (max-width: 1024px){
+    #videoPreview iframe{
+        height: 36.9vw;
+    }
+
+    /* related product section */
+    #categoryProducts::before{
+        display: none;
+    }
+
+    #categoryProducts{
+        background-color: var(--background_2);
+    }
+
+    .prContainer{
+        margin: 0 4rem;
+    }
+}
+
+/* Mobile CSS */
+@media screen and (max-width: 768px){
+    /* preview section */
+    #previewContainer{
+        flex-direction: column;
+    }
+
+    #videoPreview {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+
+    #videoPreview iframe {
+        width: 100%;
+        height: 51.6vw;
+    }
+
+    /* download section */
+    #youtubeButton{
+        display: none;
+    }
+
+    #facebookButton{
+        display: none;
+    }
+
+    #youtubeButtonM{
+        display: block;
+    }
+    
+    #facebookButtonM{
+        display: block;
+    }
+
+    #descDownload{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .videoDesc {
+        width: 100%;
+    }
+
+    #videoDesc{
+        display: none;
+    }
+
+    #videoDescMobile{
+        display: block;
+    }
+
+    #videoDescMobile img{
+        width: 100%;
+        height: 100%;
+    }
+
+    #videoDownload{
+        margin-top: 2rem;
+    }
+
+    .downloadContainer {
+        padding-left: 3rem;
+        padding-top: 0.2rem;
+    }
+
+    /* related product section */
+    #categoryProducts::before{
+        display: none;
+    }
+
+    #categoryProducts{
+        background-color: var(--background_2);
+    }
+
+    #container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .prContainer{
+        flex-direction: row;
+        overflow-x: scroll;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        margin: 0 3rem;
+        scroll-behavior: smooth;
+    }
+
+    .prList{
+        margin: 1rem 2rem;
+        min-width: fit-content;
+    }
+
+    .prList:nth-child(1){
+        margin-left: 0;
+    }
+
+    .prList:nth-child(3){
+        margin-right: 0;
+    }
+
+    .cards{
+        width: 62vw;
+    }
+
+    .prevNxt{
+        display: block;
+        width: 15rem;
+        height: 15rem;
+        position: relative;
+        top: 18rem;
+    }
+
+    #prevButton{
+        transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        margin-left: 10vw;
+    }
+
+    #nxtButton{
+        margin-right: 10vw;
+    }
+}
+
+@media screen and (max-width: 425px){
+    /* Download Section */
+    #downloadButtons .completeDownload{
+        line-height: normal;
+    }
+
+    #downloadButtons .productDownload{
+        line-height: normal;
+    }
+
+    #downloadButtons .previewDownload{
+        line-height: normal;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .downloadContainer{
+        padding-left: .2rem;
+    }
+}

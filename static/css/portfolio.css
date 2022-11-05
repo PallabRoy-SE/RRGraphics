@@ -1,0 +1,88 @@
+/* portfolio page CSS */
+#main{
+    background-image: url(/static/img/portfolio_main.webp);
+    min-height: 92vh;
+    background-repeat: no-repeat;
+    background-position: 0 26%;
+}
+
+#main::before{
+    position: absolute;
+    content: "";
+    height: 92vh;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 6.5rem;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 18rem;
+    min-height: inherit;
+    color: white;
+    z-index: 1;
+}
+
+.main_text{
+    z-index: 1;
+    text-align: center;
+}
+
+.main_text h1{
+    font-family: var(--font_Nunito);
+    font-weight: 900;
+    line-height: 1;
+    font-size: 6rem;
+    margin-bottom: 1.9rem;
+}
+
+.main_text span{
+    font-size: 2rem;
+    font-family: var(--font_Nunito);
+    line-height: 1.5rem;
+}
+
+.main_text a{
+    font-size: 1.8rem;
+    font-family: var(--font_Nunito);
+    line-height: 1.5;
+    color: #9ac77a;
+    font-weight: 700;
+}
+
+/* Responsive CSS */
+/* Mobile CSS */
+@media screen and (max-width: 768px){
+    #main{
+        background-position: -384px 23%;
+    }
+
+    #main::before{
+        height: 92.4vh;
+    }
+
+    .main_text{
+        z-index: 0;
+    }
+
+    .main_text h1{
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 640px){
+    #main{
+        background-position: 50% 30%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    #main{
+        background-position: 62% 60%;
+    }
+}

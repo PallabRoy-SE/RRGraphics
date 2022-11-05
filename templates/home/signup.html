@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/signup.css">
+{% endblock css %}
+
+{% block title %}Sign Up | RRGraphics{% endblock title %}
+
+
+{% block bodyContent %}
+<main class="mainContainer">
+    <div class="container">
+        <svg id="svg1" class="mainSvg" tabindex="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 580" role="img"
+            aria-label="Circle">
+            <defs>
+                <linearGradient id="gradient-orange-pink-horizontal" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#f7bc28"></stop>
+                    <stop offset="100%" stop-color="#f93d66"></stop>
+                </linearGradient>
+            </defs>
+            <path
+                d="M290 0C129.8 0 0 129.8 0 290s129.8 290 290 290 290-129.8 290-290S450.2 0 290 0zm195.1 485.1c-25.4 25.4-54.9 45.3-87.7 59.2-34 14.4-70.2 21.7-107.4 21.7s-73.4-7.3-107.4-21.7c-32.9-13.9-62.4-33.8-87.7-59.2-25.3-25.4-45.3-54.9-59.2-87.7C21.3 363.4 14 327.3 14 290s7.3-73.4 21.7-107.4c13.9-32.9 33.8-62.4 59.2-87.7 25.4-25.3 54.9-45.3 87.7-59.2C216.6 21.3 252.7 14 290 14s73.4 7.3 107.4 21.7c32.9 13.9 62.4 33.8 87.7 59.2 25.4 25.4 45.3 54.9 59.2 87.7 14.4 34 21.7 70.2 21.7 107.4s-7.3 73.4-21.7 107.4c-13.9 32.9-33.8 62.4-59.2 87.7z"
+                fill="url(#gradient-orange-pink-horizontal)">
+            </path>
+        </svg>
+        <svg id="svg2" class="mainSvg" tabindex="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 50" role="img"
+            aria-label="Triangle">
+            <defs>
+                <linearGradient id="gradient-teal-purple-horizontal" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#00dcaf"></stop>
+                    <stop offset="100%" stop-color="#6d47d9"></stop>
+                </linearGradient>
+            </defs>
+            <path
+                d="M56.7,47L30.2,1c-0.8-1.3-2.7-1.3-3.5,0L0.3,47c-0.8,1.3,0.2,3,1.7,3h53C56.5,50,57.5,48.3,56.7,47z M5.5,46l23-40l23,40 H5.5z"
+                fill="url(#gradient-teal-purple-horizontal)">
+            </path>
+        </svg>
+        <svg id="svg3" class="mainSvg" tabindex="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 50" role="img"
+            aria-label="Pentagon">
+            <defs>
+                <linearGradient id="gradient-purple-pink-horizontal" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#6d47d9"></stop>
+                    <stop offset="100%" stop-color="#f93d66"></stop>
+                </linearGradient>
+            </defs>
+            <path
+                d="M51.2,18l-24-17.6c-0.7-0.5-1.7-0.5-2.4,0L0.8,18c-0.7,0.5-1,1.4-0.7,2.2l9.2,28.4c0.3,0.8,1,1.4,1.9,1.4h29.7	c0.9,0,1.6-0.6,1.9-1.4l9.2-28.4C52.2,19.4,51.9,18.5,51.2,18z M39.4,46H12.6L4.3,20.3L26,4.5l21.7,15.8L39.4,46z"
+                fill="url(#gradient-purple-pink-horizontal)">
+            </path>
+        </svg>
+        <svg id="svg4" class="mainSvg" tabindex="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 50" role="img"
+            aria-label="Star">
+            <defs>
+                <linearGradient id="gradient-blue-purple-vertical" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#4772d9"></stop>
+                    <stop offset="100%" stop-color="#6d47d9"></stop>
+                </linearGradient>
+            </defs>
+            <path
+                d="M50.3,17.6l-15.5-2.3l-7-14.2c-0.7-1.5-2.9-1.5-3.6,0l-7,14.2L1.7,17.6c-1.6,0.2-2.3,2.2-1.1,3.4l11.3,11L9.2,47.7	c-0.3,1.6,1.4,2.9,2.9,2.1L26,42.4l13.9,7.4c1.5,0.8,3.2-0.5,2.9-2.1L40.2,32l11.2-11C52.6,19.8,51.9,17.8,50.3,17.6z M36.6,29.9	c-0.5,0.5-0.7,1.1-0.6,1.8l2.1,12.6l-11.2-6c-0.6-0.3-1.3-0.3-1.9,0l-11.2,6L16,31.7c0.1-0.6-0.1-1.3-0.6-1.8l-9.1-9l12.6-1.8	c0.7-0.1,1.2-0.5,1.5-1.1L26,6.5L31.6,18c0.3,0.6,0.9,1,1.5,1.1L45.7,21L36.6,29.9z"
+                fill="url(#gradient-blue-purple-vertical)">
+            </path>
+        </svg>
+        <div class="signupContainer">
+            <div id="signupText">
+                <h1 data-test-selector="authentication-page-heading">Enjoy All Downloads FREE!</h1>
+                <small>Create your RRGraphics Account for Free & Enjoy Unlimited Downloads.</small>
+            </div>
+            <div class="signupBox">
+                <div class="">
+                    <svg id="svg5" class="mainSvg" tabindex="" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 134.9 70.1" role="img" aria-label="Lines">
+                        <defs>
+                            <linearGradient id="gradient-purple-blue-vertical" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#6d47d9"></stop>
+                                <stop offset="100%" stop-color="#4772d9"></stop>
+                            </linearGradient>
+                        </defs>
+                        <path
+                            d="M2 70.1c-.5 0-1-.2-1.4-.6-.8-.8-.8-2 0-2.8L66.7.6c.8-.8 2-.8 2.8 0s.8 2 0 2.8L3.4 69.5c-.4.4-.9.6-1.4.6zM33.1 70.1c-.5 0-1-.2-1.4-.6-.8-.8-.8-2 0-2.8L97.7.6c.8-.8 2-.8 2.8 0s.8 2 0 2.8l-66 66.1c-.4.4-.9.6-1.4.6zM66.8 70.1c-.5 0-1-.2-1.4-.6-.8-.8-.8-2 0-2.8L131.5.6c.8-.8 2-.8 2.8 0s.8 2 0 2.8L68.2 69.5c-.4.4-.9.6-1.4.6z"
+                            fill="url(#gradient-purple-blue-vertical)">
+                        </path>
+                    </svg>
+                    <div class="signupBoxContainer">
+                        <div class="signupFormContainer" data-test-selector="sign-in-form">
+                            <div class="formText">
+                                <h1>Sign Up</h1>
+                            </div>
+                            <form id="signupForm" action="/signup" method="POST">
+                                {% csrf_token %}
+                                <div class="nameInput">
+                                    <div class="fname inputLabel">
+                                        <label for="fname">First Name</label>
+                                        <input type="text" name="fname" id="fname" required>
+                                        <span id="fnameError" class="errorText"></span>
+                                    </div>
+                                    <div class="lname inputLabel">
+                                        <label for="lname">Last Name</label>
+                                        <input type="text" name="lname" id="lname" required>
+                                        <span id="lnameError" class="errorText"></span>
+                                    </div>
+                                </div>
+                                <div class="emailInput inputLabel">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="email" required>
+                                    <span id="emailError" class="errorText"></span>
+                                </div>
+                                <div class="nameInput">
+                                    <div class="fname inputLabel">
+                                        <label for="pass1">Password</label>
+                                        <input type="password" name="pass1" id="pass1" required>
+                                        <span id="pass1Error" class="errorText"></span>
+                                    </div>
+                                    <div class="pass2 inputLabel">
+                                        <label for="pass2">Re Enter Password</label>
+                                        <input type="password" name="pass2" id="pass2" required>
+                                        <span id="pass2Error" class="errorText"></span>
+                                    </div>
+                                </div>
+                                <button type="submit">Create Your Account</button>
+                                <div class="formFooter">
+                                    Already have an Account?
+                                    <a href="/signin">Sign In</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock bodyContent %}
+
+{% block script %}
+<script src="/static/js/signup.js"></script>
+{% endblock script %}

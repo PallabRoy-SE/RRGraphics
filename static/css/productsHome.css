@@ -1,0 +1,221 @@
+body{
+    background-color: var(--background_2);
+}
+
+/* Heading CSS */
+.headings{
+    text-align: center;
+    padding: 4rem;
+    color: var(--heading_color);
+    font-family: var(--font_Archivo);
+    font-size: 3.2rem;
+}
+
+/* product filter CSS */
+#productsContainer{
+    display: flex;
+    box-shadow: 0px 0px 40px 0px rgba(0,0,0,.1);
+    min-height: 50rem;
+}
+
+#filter{
+    width: 20%;
+    box-shadow: 8px 0 8px -8px rgba(0,0,0,.1);
+}
+
+.filterContent{
+    padding: 2.4rem;
+}
+
+.filterCheckbox{
+    border: 2px solid #e0e0e1;
+    border-radius: 6px;
+    height: 2.6rem;
+    width: 2.6rem;
+}
+
+.filterCheckbox svg{
+    color: var(--linkMark_color);
+    height: 1.25rem;
+    fill: currentColor;
+    position: relative;
+    top: -0.1rem;
+}
+
+.filterText{
+    margin-left: 1.2rem;
+    text-transform: capitalize;
+    color: var(--label_color);
+}
+
+#filter h6{
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+}
+
+#filter li{
+    text-align: center;
+    list-style: none;
+    padding-bottom: 2rem;
+}
+
+#filter a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    font-family: var(--font_Roboto);
+    font-weight: 500;
+}
+
+/* product CSS */
+#products{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#container{
+    flex-basis: 100%;
+    min-height: 500px;
+}
+
+.prContainer{
+    margin: 0 4rem;
+    justify-content: flex-start;
+}
+
+.prList{
+    margin: 1.91971% 1.41971% 1.91971% 1.41971%;
+}
+
+.cards:hover{
+    box-shadow: 0 5px 25px #02fff0c4;
+}
+
+.prDownloadDropupAuth{
+    width: auto;
+    white-space: nowrap;
+    font-style: inherit;
+    font-size: 1.2rem;
+    letter-spacing: 0;
+    padding: 1rem;
+    line-height: 1.4;
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    background-color: #303030;
+    color: #fff;
+    border-radius: 6px;
+    transform: translate(-50%,-8px);
+}
+
+.prDownloadDropupAuth::after{
+    content: "";
+    display: block;
+    border-top: 5px solid #303030;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.prDownloadDropup{
+    left: 10%;
+}
+
+.prDownloadDropup::after{
+    left: 62%;
+}
+
+/* Pagination section */
+#pagination{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 1rem 4rem 2.4rem;
+}
+
+.paginationButtons{
+    text-align: center;
+    width: 10rem;
+    padding: .6rem;
+    background-color: #ff1b65;
+    border: none;
+    border-radius: 18px;
+    color: white !important;
+    font-family: Montserrat,-apple-system,BlinkMacSystemFont,Segoe UI,Fira Sans,Helvetica Neue,Arial,sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    cursor: pointer;
+    outline: none;
+    transition: all .2s ease-in-out;
+}
+
+.paginationButtons:hover{
+    background-color: #ca114b;
+}
+
+/* Responsive CSS */
+/* Tablet CSS */
+@media screen and (max-width: 1024px){
+    /* Product Section */
+    .prList{
+        flex-basis: 46.38686%;
+    }
+}
+
+/* Mobile CSS */
+@media screen and (max-width: 768px){
+    .prContainer{
+        display: block;
+    }
+
+    .prList{
+        margin: 2.91971% 1.41971% 4.91971% 1.41971%;
+    }
+}
+
+@media screen and (max-width: 640px){
+    #filter{
+        width: 30%;
+    }
+
+    #filter h6{
+        font-size: 2rem;
+    }
+
+    #filter a{
+        font-size: 3rem;
+    }
+
+    .filterCheckbox{
+        width: 3.6rem;
+        height: 3.6rem;
+    }
+
+    .filterCheckbox svg{
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .paginationButtons{
+        font-size: 1rem;
+        font-weight: normal;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .filterCheckbox{
+        border-radius: 4px;
+    }
+
+    .filterCheckbox svg{
+        top: -0.5rem;
+    }
+}

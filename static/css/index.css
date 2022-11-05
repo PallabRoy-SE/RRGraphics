@@ -1,0 +1,310 @@
+/* Popular project section */
+#popularProjects{
+    margin: 0;
+}
+
+#popularProjects::before{
+    content: "";
+    background-color: var(--background_2);
+    position: absolute;
+    width: 100%;
+    height: 136%;
+    z-index: -1;
+}
+
+#popularProjects .headings{
+    text-align: center;
+    padding: 7rem;
+    color: var(--heading_color);
+    font-family: var(--font_Archivo);
+    font-size: 3.52rem;
+}
+
+.prButton_a{
+    font-family: var(--font_Roboto);
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.prevNxt{
+    display: none;
+}
+
+/* About us section */
+#about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.aboutContainer{
+    width: 78%;
+    margin: 8rem auto;
+    text-align: center;
+}
+
+.aboutContainer h1{
+    margin-bottom: 6rem;
+    font-size: 4.49rem;
+    color: var(--heading_color);
+    font-family: var(--font_Archivo);
+}
+
+.aboutContainer p{
+    text-align: justify;
+    font-size: 1.92rem;
+}
+
+/* Contact section */
+#contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#contact::before{
+    content: "";
+    background-color: var(--background_2);
+    position: absolute;
+    height: 101%;
+    width: 100%;
+    z-index: -2;
+}
+
+.contactContainer{
+    width: 83%;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+#contact h1{
+    padding: 6.2rem 0 3.4rem 0;
+    font-size: 4.49rem;
+    color: var(--heading_color);
+    font-family: var(--font_Archivo);
+}
+
+.contact-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: left;
+}
+
+.contact-box form{
+    width: 60%;
+    margin-bottom: 1.4rem;
+}
+
+.contact-box label{
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: var(--label_color);
+}
+
+.contact-box input,
+.contact-box textarea{
+    width: 100%;
+    padding: 1.1rem;
+    margin: .2rem 0 1.8rem 0;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid rgb(54, 54, 54);
+}
+
+.contact-box form button{
+    margin: 1rem auto;
+    width: 10rem;
+    height: 3.6rem;
+    display: block;
+    background-color: var(--button_color);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition: var(--buttonHover_transition);
+}
+
+.contact-box form button:hover{
+    background-color: var(--buttonHover_color);
+
+}
+
+.contactIcon{
+    position: relative;
+    bottom: 15.4rem;
+    right: -12rem; 
+}
+
+.contactIcon img{
+    height: 26vw;
+    opacity: 0.1;
+}
+
+/* Responsive CSS */
+/* Tablet CSS */
+@media screen and (max-width: 1024px){
+    /* Product Section */
+    #popularProjects::before{
+        display: none;
+    }
+
+    #popularProjects{
+        background-color: var(--background_2);
+        padding-bottom: 1rem;
+    }
+
+    .prList{
+        flex-basis: 48.38686%;
+    }
+
+    /* contact css */
+    #contact::before{
+        display: none;
+    }
+
+    #contact{
+        background-color: var(--background_2);
+    }
+}
+
+/* Mobile CSS */
+@media screen and (max-width: 768px){
+    /* Product Section */
+    #popularProjects::before{
+        display: none;
+    }
+
+    #popularProjects{
+        background-color: var(--background_2);
+        padding-bottom: 1rem;
+    }
+
+    #container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .prContainer{
+        flex-direction: row;
+        overflow-x: scroll;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        margin: 0 3rem;
+        scroll-behavior: smooth;
+    }
+
+    .prList{
+        margin: 1rem 2rem;
+        min-width: fit-content;
+    }
+
+    .prList:nth-child(1){
+        margin-left: 0;
+    }
+
+    .prList:nth-child(6){
+        margin-right: 0;
+    }
+
+    .cards{
+        width: 62vw;
+    }
+
+    .prevNxt{
+        display: block;
+        width: 25rem;
+        height: 25rem;
+        position: relative;
+        top: 18rem;
+    }
+
+    #prevButton{
+        transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        margin-left: 11vw;
+    }
+
+    #nxtButton{
+        margin-right: 11vw;
+    }
+
+    /* Aboutus section */
+    .aboutContainer{
+        width: 80%;
+    }
+
+    /* contact css */
+    #contact::before{
+        display: none;
+    }
+
+    #contact{
+        background-color: var(--background_2);
+    }
+
+    .contactIcon{
+        display: none;
+    }
+
+    .contactContainer{
+        width: 100%;
+    }
+
+    .contact-box form{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 640px){
+
+    /* Product Section */
+    #popularProjects::before {
+        height: 85%;
+    }
+
+    .prButton_a{
+        font-size: 1.7rem;
+    }
+
+    /* Contact Section */
+    #contact::before{
+        height: 85%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    /* Product Section */
+    #popularProjects::before {
+        display: none;
+    }
+
+    #popularProjects{
+        background-color: var(--background_2);
+    }
+
+    .prButton_a{
+        padding: .8rem 0;
+    }
+
+    /* Contact Section */
+    .contact-box form button{
+        font-size: 2rem;
+    }
+
+    .contact-box input, .contact-box textarea{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .button{
+        width: 12rem;
+        border-radius: 4px;
+    }
+}

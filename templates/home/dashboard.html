@@ -1,0 +1,63 @@
+{% extends 'home/baseProduct.html' %}
+
+{% block productContainer %}
+<div id="container">
+    <ul class="prContainer">
+        {% for product in allProducts %}
+        <li class="prList">
+            <div class="cards">
+                <a title="{{product.product_title}}" href="/videotemplates/{{product.video_id}}" class="prLink"></a>
+                <div class="prVideo">
+                    <div class="videoPlayer">
+                        <iframe class="video" src="https://www.youtube.com/embed/{{product.video_id}}"
+                            frameborder="0"></iframe>
+                    </div>
+                </div>
+                <div class="prInfo">
+                    <div class="prText">
+                        <div class="prTitle">
+                            <span>{{product.product_title}}</span>
+                        </div>
+                        <div class="prAuthor">
+                            <div class="productUserImage">
+                                <img src="/media/{{ product.product_user.profile.profile_image }}" alt="{{product.product_user.first_name}}">
+                            </div>
+                            By&nbsp;
+                            <!--  -->
+                            <a href="/portfolio">
+                                {{product.product_user.first_name}}
+                                <!--  -->
+                            </a>
+                        </div>
+                    </div>
+                    <div class="prDownload">
+                        <a href="/mydashboard/product/{{product.product_id}}/edit">
+                            <button id="button{{product.video_id}}" class="prDownloadButton" type="button">
+                                <img id="editIcon" src="/static/img/edit_icon.svg" alt="edit">
+                            </button>
+                        </a>
+                        <span id="dropup{{product.video_id}}" class="prDownloadDropupAuth">
+                            Edit
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div id="pagination">
+    {% if prev %}
+    <a href="/mydashboard/?page={{prev}}" class="paginationButtons">Previous</a>
+    {% else %}
+    <a href="#" class="paginationButtons">Previous</a>
+    {% endif %}
+
+    {% if nxt %}
+    <a href="/mydashboard/?page={{nxt}}" class="paginationButtons">Next</a>
+    {% else %}
+    <a href="#" class="paginationButtons">Next</a>
+    {% endif %}
+</div>
+{% endblock productContainer %}

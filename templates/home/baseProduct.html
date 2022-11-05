@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/productsHome.css">
+<link rel="stylesheet" href="/static/css/dashboard.css">
+{% block productcss %}{% endblock productcss %}
+{% endblock css %}
+
+{% block title %}Products | RRGraphics{% endblock title %}
+
+{% block bodyContent %}
+
+<header>
+    <div class="bannerContainer">
+        <img class="banner" src="/media/{{request.user.profile.banner_image}}" alt="banner">
+    </div>
+</header>
+
+<section id="productsContainer">
+    <section id="filter">
+        <div class="profileContainer">
+            <div class="profileImage">
+                <img class="profile" src="/media/{{request.user.profile.profile_image}}"
+                    alt="{{request.user.first_name}}">
+            </div>
+            <div class="usernameContainer">
+                <img src="/static/img/ribbon.png" alt="" srcset="">
+                <span class="userName">{{request.user.first_name}} {{request.user.last_name}}</span>
+            </div>
+        </div>
+        <div class="filterContent">
+            <div class="mydashboard">
+                <div class="dashboardIcon">
+                    <img src="/static/img/dashboard.svg" alt="" srcset="">
+                </div>
+                <h3>My Dashboard:</h3>
+            </div>
+            <div class="dashboardContainer">
+                <a href="/mydashboard/product/add">
+                    <div class="dashboardContent">
+                        <div class="dashboardContentIcon">
+                            <img src="/static/img/add-button.svg">
+                        </div>
+                        <div class="dashboardLink">Add Product</div>
+                    </div>
+                </a>
+                <a href="/mydashboard">
+                    <div class="dashboardContent">
+                        <div class="dashboardContentIcon">
+                            <img src="/static/img/product.svg">
+                        </div>
+                        <div class="dashboardLink">My Products</div>
+                    </div>
+                </a>
+                <a href="/mydashboard/editprofile">
+                    <div class="dashboardContent">
+                        <div class="dashboardContentIcon">
+                            <img src="/static/img/edit.svg" alt="" srcset="">
+                        </div>
+                        <div class="dashboardLink">Edit Profile</div>
+                    </div>
+                </a>
+                <a href="/mydashboard/editpassword">
+                    <div class="dashboardContent">
+                        <div class="dashboardContentIcon">
+                            <img src="/static/img/padlock.svg" alt="" srcset="">
+                        </div>
+                        <div class="dashboardLink">Change Password</div>
+                    </div>
+                </a>
+                <a href="/logout">
+                    <div class="dashboardContent">
+                        <div class="dashboardContentIcon">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </div>
+                        <div class="dashboardLink">Log Out</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        {% block productContainer %}{% endblock productContainer %}
+    </section>
+</section>
+
+{% endblock bodyContent %}
+
+{% block script %}
+{% block productscript %}{% endblock productscript %}
+{% endblock script %}

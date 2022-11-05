@@ -1,0 +1,50 @@
+{% extends 'home/baseProduct.html' %}
+
+{% block productcss %}
+<link rel="stylesheet" href="/static/css/editProduct.css">
+{% endblock productcss %}
+
+{% block productContainer %}
+<div class="productAddContainer">
+    <form action="/mydashboard/product/add" class="productAddForm" method="POST">
+        {% csrf_token %}
+        <div class="productTitle productAdd">
+            <label for="productTitle">Product Title</label>
+            <input type="text" id="productTitle" name="productTitle" required>
+            <span id="productTitleError" class="errorText"></span>
+        </div>
+        <div class="videoId productAdd">
+            <label for="videoId">Video Id</label>
+            <input type="text" id="videoId" name="videoId" required>
+            <span id="videoIdError" class="errorText"></span>
+        </div>
+        <div class="productCategory productAdd">
+            <label for="productCategory">Product Category</label>
+            <input type="text" id="productCategory" name="productCategory" required>
+            <span id="productCategoryError" class="errorText"></span>
+        </div>
+        <div class="productSubcategory productAdd">
+            <label for="productSubcategory">Product Subcategory</label>
+            <input type="text" id="productSubcategory" name="productSubcategory" required>
+            <span id="productSubcategoryError" class="errorText"></span>
+        </div>
+        <div class="downloadLink productAdd">
+            <label for="downloadLink">Download Link</label>
+            <textarea id="downloadLink" name="downloadLink" required></textarea>
+            <span id="downloadLinkError" class="errorText"></span>
+        </div>
+        <div class="productDescription productAdd">
+            <label for="productDescription">Product Description</label>
+            <textarea id="productDescription" name="productDescription"></textarea>
+            <span id="productDescriptionError" class="errorText"></span>
+        </div>
+        <div class="productAddButtons">
+            <input id="productSave" type="submit" class="button" value="Save">
+        </div>
+    </form>
+</div>
+{% endblock productContainer %}
+
+{% block productscript %}
+<script src="/static/js/editProduct.js"></script>
+{% endblock productscript %}

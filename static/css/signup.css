@@ -1,0 +1,318 @@
+/* Signup page CSS */
+.mainContainer{
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    min-height: 64.7rem;
+}
+
+.container{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    position: relative;
+}
+
+.signupContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    max-width: 95%;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#signupText{
+    align-items: flex-start;
+    margin-bottom: 0;
+    padding-left: 4rem;
+    padding-right: 12rem;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#signupText h1{
+    display: flex;
+    text-align: left;
+    font-style: inherit;
+    font-size: 5.8rem;
+    line-height: 5.8rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    letter-spacing: -.03em;
+    font-weight: 200;
+    align-items: center;
+    color: #303030;
+    position: relative;
+    min-width: 65rem;
+    margin: 0.67em 0;
+}
+
+#signupText h1::before{
+    display: block;
+    background: #523ee8 linear-gradient(90deg,#523ee8,#8070ff);
+    border-radius: 6px;
+    content: "";
+    height: .4rem;
+    left: -25%;
+    position: absolute;
+    transform: translateX(-30px);
+    width: 25%;
+}
+
+#signupText small{
+    text-align: left;
+    font-style: inherit;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    letter-spacing: 0;
+    margin-bottom: 6rem;
+    color: #959597;
+    padding-left: .3rem;
+}
+
+.signupBox{
+    align-self: auto;
+    width: 44rem;
+    margin: 4rem 0;
+    background-color: #fff;
+}
+
+.signupBoxContainer{
+    border: 1px solid #e0e0e1;
+    border-radius: 6px;
+    padding: 3rem;
+    min-width: 32rem;
+}
+
+.signupFormContainer{
+    font-style: inherit;
+    letter-spacing: 0;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: 600;
+}
+
+.formText{
+    margin: 2rem 0 4rem;
+    font-size: 1.35rem;
+    font-family: var(--font_Montserrat);
+}
+
+#signupForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputLabel{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.inputLabel label{
+    margin-bottom: .7rem;
+    font-family: var(--font_Montserrat);
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.inputLabel input{
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+    color: #303030;
+    background-color: #fff;
+    border-radius: 6px;
+    height: 3.5rem;
+    padding: .5rem 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    border: 2px solid #e0e0e1;
+    outline: none;
+}
+
+.nameInput{
+    display: flex;
+    flex-direction: row;
+}
+
+.fname{
+    margin-right: 2.9rem;
+}
+
+.emailInput{
+    width: 100%;
+}
+
+#signupForm button{
+    text-align: center;
+    width: 100%;
+    padding: 1rem 2rem 1rem;
+    font-family: var(--font_Montserrat);
+    font-weight: 700;
+    font-size: 1.4rem;
+    white-space: nowrap;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--buttonHover_transition);
+    background-color: var(--button_color);
+    color: #fff;
+    line-height: 1.6rem;
+    margin-bottom: .8rem;
+}
+
+#signupForm button:hover{
+    background-color: var(--buttonHover_color);
+}
+
+.formFooter{
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: 600;
+    margin: 1.8rem auto 0;
+    text-align: center;
+}
+
+.formFooter a{
+    color: var(--linkMark_color);
+    border: 0;
+    background: transparent;
+    display: inline;
+    padding: 0;
+}
+
+/* svg CSS */
+.mainSvg{
+    fill: currentColor;
+    height: 1em;
+}
+
+#svg1{
+    transform: translate(-35%,-55%);
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40rem;
+}
+
+#svg2{
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    top: 8%;
+    left: 40%;
+    transform: rotate(-45deg);
+    height: 5.5rem;
+}
+
+#svg3{
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    height: 5.5rem;
+    transform: rotate(30deg);
+}
+
+#svg4{
+    left: 45%;
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    bottom: 15%;
+    height: 5.5rem;
+    transform: rotate(30deg);
+}
+
+#svg5{
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 7rem;
+    transform: translate(-10%,-60%) scaleX(-1);
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 768px){
+    .mainContainer{
+        min-height: 150rem;
+        height: 100vh;
+    }
+
+    #signupText{
+        display: none;
+    }
+
+    #signupForm{
+        padding-top: 5rem;
+    }
+
+    .signupBox{
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .signupBoxContainer{
+        padding: 5rem 3rem;
+    }
+
+    .formText{
+        font-size: 3.35rem;
+        text-align: center;
+    }
+
+    .nameInput{
+        width: 100%;
+    }
+
+    .inputLabel{
+        width: 100%;
+    }
+
+    
+    .inputLabel label{
+        margin-bottom: 1.7rem;
+        font-size: 3rem;
+        line-height: 2.6rem;
+    }
+
+    .inputLabel input{
+        font-size: 2.8rem;
+        height: 7.5rem;
+    }
+
+    .errorText{
+        font-size: 2.2rem;
+        line-height: 2.4rem;
+    }
+
+    #signupForm button{
+        font-size: 3.4rem;
+        line-height: 5.6rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .formFooter{
+        font-size: 2.6rem;
+    }
+}
